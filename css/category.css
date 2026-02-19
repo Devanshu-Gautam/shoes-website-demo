@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: white;
+}
+
+.marq {
+    background: #ffc107;
+    padding: 8px;
+    font-weight: 600;
+}
+
+.premium-nav {
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: drop 0.8s ease;
+}
+
+@keyframes drop {
+    from {
+        transform: translateY(-60px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #000 !important;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffc107;
+    transition: .4s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.logo-btn {
+    border-radius: 50%;
+    background: #ffc107;
+}
+
+.search-box {
+    width: 160px;
+    border-radius: 20px;
+}
+
+.go-btn {
+    border-radius: 20px;
+    background: #000;
+    color: white;
+}
+
+.category-hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    animation: fadeUp 1s ease;
+}
+
+.hero-sub {
+    color: #666;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-area {
+    padding-bottom: 80px;
+}
+
+.cat-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background: #fff;
+    transition: .6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cat-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.cat-card:hover {
+    transform: rotateY(20deg) rotateX(10deg) translateY(-15px);
+}
+
+.cat-card:hover img {
+    transform: scale(1.1);
+}
+
+.cat-card h4 {
+    margin: 20px 0;
+    color: #d60000;
+}
+
+.view-btn {
+    border-radius: 20px;
+    background: #000;
+    color: white;
+}
+
+.view-btn:hover {
+    background: #ffc107;
+    color: black;
+}
+
+.footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,252 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.marq {
+    background: #ffc107;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.nav-2d {
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-60px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffc107;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.search-box {
+    width: 160px;
+    border-radius: 20px;
+}
+
+.go-btn {
+    border-radius: 20px;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(45deg, #000, #333);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animate-text {
+    font-size: 3rem;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ffc107;
+    }
+}
+
+.buy-btn {
+    transition: 0.4s;
+}
+
+.buy-btn:hover {
+    transform: scale(1.2);
+}
+
+.moving-gallery {
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.moving-gallery img {
+    width: 200px;
+    animation: move 10s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-800px);
+    }
+}
+
+.shoe-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.shoe-card img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.shoe-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    background: black;
+    padding: 15px;
+}
+
+.category-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.category-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e41111;
+}
+
+.category-sub {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.category-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.category-card {
+    width: 200px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.category-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.6s;
+}
+
+.category-card:hover {
+    transform: rotateY(5deg) rotateX(5deg) translateY(-5px);
+}
+
+.category-card h5 {
+    margin: 15px 0 10px;
+    font-weight: 600;
+}
+
+.category-card button {
+    border-radius: 20px;
+    padding: 6px 18px;
+    transition: 0.3s;
+}
+
+.category-card button:hover {
+    transform: scale(1.1);
+}
+
+.brand-marquee {
+    background: linear-gradient(135deg, #000, #111);
+    padding: 60px 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.brand-heading {
+    color: #ffc107;
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.brand-track {
+    display: flex;
+    gap: 40px;
+    animation: scrollBrands 20s linear infinite;
+}
+
+.brand-track:hover {
+    animation-play-state: paused;
+}
+
+.brand-card {
+    min-width: 160px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.brand-card img {
+    width: 80px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.7));
+}
+
+.brand-card span {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.brand-card:hover {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+    background: rgba(255, 193, 7, 0.2);
+}
+
+@keyframes scrollBrands {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-120%);
+    }
+}

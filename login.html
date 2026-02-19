@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AONE Shoes Club | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/project 2/CSS/login.css">
+</head>
+
+<body>
+
+    <!-- ================= MARQUEE (SAME) ================= -->
+    <marquee class="marq">
+        👟 Welcome to AONE Shoes Club Shop | Flat 30% OFF | Best Quality Shoes 👟
+    </marquee>
+
+    <!-- ================= NAVBAR (SAME AS YOUR SITE) ================= -->
+    <nav class="navbar navbar-dark bg-dark nav-2d">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <button class="btn btn-warning nav-btn">👟</button>
+
+            <div class="d-flex align-items-center gap-4">
+                <a class="nav-link active" href="/index.html">Home</a>
+                <a class="nav-link" href="/about.html">About</a>
+                <a class="nav-link" href="/category.html">Category</a>
+                <a class="nav-link" href="/project 2/html/login.html">Login</a>
+            </div>
+
+            <button class="btn btn-outline-light nav-btn">👟</button>
+        </div>
+    </nav>
+
+    <!-- ================= LOGIN SECTION ================= -->
+    <div class="login-wrapper">
+
+        <div class="login-box">
+            <h2>👟 Login</h2>
+            <p class="tagline">AONE Shoes Club</p>
+
+            <form onsubmit="loginSuccess(event)">
+                <input type="email" placeholder="Email ID" required>
+                <input type="password" placeholder="Password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER (SAME ADDRESS) ================= -->
+    <footer class="footer text-center">
+        <p>
+            📍 Akash Nagar, Near Ghanshyam Farm House, Pin Code – 201015 <br>
+            📞 8130207757 | ✉️ ishantkumar1197@gmail.com <br>
+            © 2026 AONE Shoes Club Shop
+        </p>
+    </footer>
+
+    <script>
+        function loginSuccess(e) {
+            e.preventDefault();
+            alert("✅ Successfully Logged In");
+        }
+    </script>
+
+</body>
+
+</html>
